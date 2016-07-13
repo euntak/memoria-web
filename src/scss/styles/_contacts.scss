@@ -7,7 +7,7 @@
   list-style: none;
 
   .dynamic-site & {
-    height: 600px;
+    height: 400px;
   }
 
   &__swipe {
@@ -17,7 +17,7 @@
       @include vcenter();
 
       @include max-screen-height($vertical-screen-breakpoint-small) {
-        transform: translateY(-90%);
+        transform: translateY(-60%);
       }
     }
   }
@@ -27,7 +27,7 @@
     overflow: hidden;
   }
 
-  &__row {
+&__row {
     @include clearfix;
 
     position: relative;
@@ -39,9 +39,9 @@
 
   &__item {
     display: inline-block;
-    width: 500px;
+    width: 300px;
     padding: 0 20px;
-    vertical-align: center;
+    vertical-align: top;
 
     .static-site & {
       position: relative;
@@ -52,37 +52,37 @@
       margin: 0 auto;
     }
 
-    @include max-screen(970px) {
-      &:nth-child(3) {
-        display: none;
-      }
-    }
+    // @include max-screen(970px) {
+    //   &:nth-child(3)&:__author {
+    //     display: none;
+    //   }
+    // }
 
-    @include max-screen(720px) {
-      &:nth-child(2) {
-        display: none;
-      }
-    }
+    // @include max-screen(720px) {
+    //   &:nth-child(2)&:__author {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__name {
-    margin: 10px 0;
-    font-size: em(25px);
+    margin: 20px 0;
+    font-size: em(22px);
     font-weight: normal;
     color: #fff;
     text-transform: uppercase;
   }
 
-  &__intro {
-    height: 100px;
-    font-size: em(17px);
-    // font-style: italic;
-    font-weight: 200;
-    line-height: 22px;
+  &__body {
+    height: 75px;
+    font-size: em(16px);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 24px;
     color: rgba(#fff, 0.8);
 
     .static-site & {
-      height: 70px;
+      height: 50px;
     }
   }
 
@@ -90,6 +90,25 @@
     font-size: em(13px);
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8);
-  }
 
+    &__link {
+      display: inline-block;
+      margin: 0 20px;
+      vertical-align: middle;
+      opacity: 0.3;
+      transition: opacity 0.3s linear;
+      &--github {
+            width: 52px;
+            height: 14px;
+            background: url('../img/github.svg') no-repeat;
+            background-size: 100% 100%;
+          }
+      &--mail {
+            width: 21px;
+            height: 36px;
+            background: url('../img/mail.svg') no-repeat;
+            background-size: 100% 100%;
+          }
+    }
+  }
 }

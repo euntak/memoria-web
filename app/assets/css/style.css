@@ -646,7 +646,7 @@ html {
   text-align: center;
   list-style: none; }
   .dynamic-site .reviews {
-    height: 300px; }
+    height: 450px; }
   .reviews__swipe {
     width: 100%; }
     .dynamic-site .reviews__swipe {
@@ -663,6 +663,12 @@ html {
   .reviews__wrap {
     position: relative;
     overflow: hidden; }
+  .reviews__review__add {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center; }
   .reviews__row {
     position: relative;
     float: left;
@@ -756,7 +762,7 @@ html {
   text-align: center;
   list-style: none; }
   .dynamic-site .contacts {
-    height: 600px; }
+    height: 400px; }
   .contacts__swipe {
     width: 100%; }
     .dynamic-site .contacts__swipe {
@@ -767,9 +773,9 @@ html {
       -ms-transform: translateY(-50%); }
       @media only screen and (max-height: 760px) {
         .dynamic-site .contacts__swipe {
-          -webkit-transform: translateY(-90%);
-              -ms-transform: translateY(-90%);
-                  transform: translateY(-90%); } }
+          -webkit-transform: translateY(-60%);
+              -ms-transform: translateY(-60%);
+                  transform: translateY(-60%); } }
   .contacts__wrap {
     position: relative;
     overflow: hidden; }
@@ -785,9 +791,9 @@ html {
       content: ''; }
   .contacts__item {
     display: inline-block;
-    width: 500px;
+    width: 300px;
     padding: 0 20px;
-    vertical-align: center; }
+    vertical-align: top; }
     .static-site .contacts__item {
       position: relative;
       display: block;
@@ -795,30 +801,41 @@ html {
       max-width: 500px;
       padding: 20px;
       margin: 0 auto; }
-    @media only screen and (max-width: 970px) {
-      .contacts__item:nth-child(3) {
-        display: none; } }
-    @media only screen and (max-width: 720px) {
-      .contacts__item:nth-child(2) {
-        display: none; } }
   .contacts__name {
-    margin: 10px 0;
-    font-size: 1.17647em;
+    margin: 20px 0;
+    font-size: 1.03529em;
     font-weight: normal;
     color: #fff;
     text-transform: uppercase; }
-  .contacts__intro {
-    height: 100px;
-    font-size: 0.8em;
-    font-weight: 200;
-    line-height: 22px;
+  .contacts__body {
+    height: 75px;
+    font-size: 0.75294em;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 24px;
     color: rgba(255, 255, 255, 0.8); }
-    .static-site .contacts__intro {
-      height: 70px; }
+    .static-site .contacts__body {
+      height: 50px; }
   .contacts__author {
     font-size: 0.61176em;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8); }
+    .contacts__author__link {
+      display: inline-block;
+      margin: 0 20px;
+      vertical-align: middle;
+      opacity: 0.3;
+      transition: opacity 0.3s linear; }
+      .contacts__author__link--github {
+        width: 52px;
+        height: 14px;
+        background: url("../img/github.svg") no-repeat;
+        background-size: 100% 100%; }
+      .contacts__author__link--mail {
+        width: 21px;
+        height: 36px;
+        background: url("../img/mail.svg") no-repeat;
+        background-size: 100% 100%; }
 
 .iphone {
   transition: opacity 500ms linear;
