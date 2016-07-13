@@ -21,7 +21,7 @@
     text-transform: uppercase;
 
     @include max-screen-height($vertical-screen-breakpoint-small) {
-      display: none;
+      // display: none;
     }
   }
 
@@ -37,12 +37,22 @@
     text-align: center;
   }
 
+  &__downloadlink {
+    display: block;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
   &__link {
     display: inline-block;
     margin: 0 20px;
     vertical-align: middle;
-    opacity: 0.3;
-    transition: opacity 0.3s linear;
+    opacity: 1.0;
+    transition: opacity 0.2s linear;
+
+    @include max-screen-height($vertical-screen-breakpoint-small) {
+      display: none;
+    }
 
     &:hover {
       opacity: 0.6;

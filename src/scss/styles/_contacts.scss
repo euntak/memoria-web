@@ -51,18 +51,6 @@
       padding: 20px;
       margin: 0 auto;
     }
-
-    // @include max-screen(970px) {
-    //   &:nth-child(3)&:__author {
-    //     display: none;
-    //   }
-    // }
-
-    // @include max-screen(720px) {
-    //   &:nth-child(2)&:__author {
-    //     display: none;
-    //   }
-    // }
   }
 
   &__name {
@@ -86,29 +74,35 @@
     }
   }
 
+  &__links {
+    display: block;
+    padding: 30px 0 40px;
+    text-align: center;
+  }
+
+  &__link {
+      display: inline-block;
+      margin: 0 20px;
+      vertical-align: middle;
+      opacity: 1.0;
+      transition: opacity 0.3s linear;
+    &--github-white {
+          width: 30px;
+          height: 30px;
+          background: url('../img/github-white.svg') no-repeat;
+          background-size: 100% 100%;
+        }
+    &--mail-white {
+          width: 30px;
+          height: 30px;
+          background: url('../img/mail-white.svg') no-repeat;
+          background-size: 100% 100%;
+        }
+  }
+
   &__author {
     font-size: em(13px);
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8);
-
-    &__link {
-      display: inline-block;
-      margin: 0 20px;
-      vertical-align: middle;
-      opacity: 0.3;
-      transition: opacity 0.3s linear;
-      &--github {
-            width: 52px;
-            height: 14px;
-            background: url('../img/github.svg') no-repeat;
-            background-size: 100% 100%;
-          }
-      &--mail {
-            width: 21px;
-            height: 36px;
-            background: url('../img/mail.svg') no-repeat;
-            background-size: 100% 100%;
-          }
-    }
   }
 }

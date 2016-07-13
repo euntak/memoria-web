@@ -816,26 +816,30 @@ html {
     color: rgba(255, 255, 255, 0.8); }
     .static-site .contacts__body {
       height: 50px; }
+  .contacts__links {
+    display: block;
+    padding: 30px 0 40px;
+    text-align: center; }
+  .contacts__link {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+    opacity: 1.0;
+    transition: opacity 0.3s linear; }
+    .contacts__link--github-white {
+      width: 30px;
+      height: 30px;
+      background: url("../img/github-white.svg") no-repeat;
+      background-size: 100% 100%; }
+    .contacts__link--mail-white {
+      width: 30px;
+      height: 30px;
+      background: url("../img/mail-white.svg") no-repeat;
+      background-size: 100% 100%; }
   .contacts__author {
     font-size: 0.61176em;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8); }
-    .contacts__author__link {
-      display: inline-block;
-      margin: 0 20px;
-      vertical-align: middle;
-      opacity: 0.3;
-      transition: opacity 0.3s linear; }
-      .contacts__author__link--github {
-        width: 52px;
-        height: 14px;
-        background: url("../img/github.svg") no-repeat;
-        background-size: 100% 100%; }
-      .contacts__author__link--mail {
-        width: 21px;
-        height: 36px;
-        background: url("../img/mail.svg") no-repeat;
-        background-size: 100% 100%; }
 
 .iphone {
   transition: opacity 500ms linear;
@@ -1109,9 +1113,6 @@ html {
     font-weight: 300;
     color: #373636;
     text-transform: uppercase; }
-    @media only screen and (max-height: 760px) {
-      .footer__title {
-        display: none; } }
   .footer.visible {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1124,12 +1125,19 @@ html {
     display: block;
     padding: 30px 0 40px;
     text-align: center; }
+  .footer__downloadlink {
+    display: block;
+    margin: 0 0 50px;
+    text-align: center; }
   .footer__link {
     display: inline-block;
     margin: 0 20px;
     vertical-align: middle;
-    opacity: 0.3;
-    transition: opacity 0.3s linear; }
+    opacity: 1.0;
+    transition: opacity 0.2s linear; }
+    @media only screen and (max-height: 760px) {
+      .footer__link {
+        display: none; } }
     .footer__link:hover {
       opacity: 0.6; }
     .footer__link--twitter {
