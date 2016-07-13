@@ -1,5 +1,5 @@
 ## Demo
-http://www.pomodrone.com
+http://memoria.pnine.co
 
 ## Usage
 
