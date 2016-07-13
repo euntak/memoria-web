@@ -30,21 +30,43 @@
 
 .app-store-link {
   display: inline-block;
-  width: 257px;
-  height: 87px;
+  width: 180px;
+  height: 61px;
   margin-top: 40px;
+  margin-right: 10px;
   background: url('../img/appstore.svg') no-repeat;
   background-size: 100% 100%;
 
   @include small-screen() {
-    width: 180px;
-    height: 61px;
-    margin-top: 30px;
+    width: 150px;
+    height: 51px;
+    margin-top: 10px;
   }
 
   &--small {
-    width: 180px;
-    height: 61px;
+    width: 150px;
+    height: 51px;
+    margin-top: 0;
+  }
+}
+
+.play-store-link {
+  display: inline-block;
+  width: 180px;
+  height: 61px;
+  margin-top: 40px;
+  background: url('../img/google-play-badge.svg') no-repeat;
+  background-size: 100% 100%;
+
+  @include small-screen() {
+    width: 150px;
+    height: 51px;
+    margin-top: 10px;
+  }
+
+  &--small {
+    width: 150px;
+    height: 51px;
     margin-top: 0;
   }
 }

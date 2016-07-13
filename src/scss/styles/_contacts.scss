@@ -1,0 +1,95 @@
+.contacts {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  list-style: none;
+
+  .dynamic-site & {
+    height: 600px;
+  }
+
+  &__swipe {
+    width: 100%;
+
+    .dynamic-site & {
+      @include vcenter();
+
+      @include max-screen-height($vertical-screen-breakpoint-small) {
+        transform: translateY(-90%);
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__row {
+    @include clearfix;
+
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 500px;
+    padding: 0 20px;
+    vertical-align: center;
+
+    .static-site & {
+      position: relative;
+      display: block;
+      width: auto;
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    @include max-screen(970px) {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @include max-screen(720px) {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    margin: 10px 0;
+    font-size: em(25px);
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__intro {
+    height: 100px;
+    font-size: em(17px);
+    // font-style: italic;
+    font-weight: 200;
+    line-height: 22px;
+    color: rgba(#fff, 0.8);
+
+    .static-site & {
+      height: 70px;
+    }
+  }
+
+  &__author {
+    font-size: em(13px);
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+}

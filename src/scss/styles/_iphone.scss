@@ -59,7 +59,7 @@
     }
 
     &.three {
-      transform: translateX(37%) translateY(-70%) rotate(90deg);
+      transform: translateX(0%) translateY(-50%);
     }
 
     &.four {
@@ -75,6 +75,10 @@
     }
 
     &.five {
+      transform: translateX(37%) translateY(-300%);
+    }
+
+    &.six {
       transform: translateX(37%) translateY(-300%);
     }
   }

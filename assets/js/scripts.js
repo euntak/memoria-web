@@ -20,7 +20,7 @@ function setupDynamicSite() {
   }
 
   var numbers = ['zero', 'one', 'two', 'three', 'four', 'five'];
-  var tooltips = ['Pomodrone', 'Color Themes', 'Stats', 'Daily Goal', 'People ♥︎ Pomodrone'];
+  var tooltips = ['Intro', 'Color Themes', 'Stats', 'Photo add', 'People ♥︎ Memoria'];
 
   var $pageFooter = $('.js-page-footer');
   var $slides = $(".js-slides");

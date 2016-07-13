@@ -36,7 +36,7 @@
     }
   }
 
-  @each $number in ('one', 'two', 'three', 'four', 'five') {
+  @each $number in ('one', 'two', 'three', 'four', 'five', 'six') {
     &--#{$number} {
       opacity: 0;
 

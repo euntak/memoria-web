@@ -19,18 +19,18 @@ function setupDynamicSite() {
     return;
   }
 
-  var numbers = ['zero', 'one', 'two', 'three', 'four', 'five'];
-  var tooltips = ['Pomodrone', 'Color Themes', 'Stats', 'Daily Goal', 'People ♥︎ Pomodrone'];
+  var numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six'];
+  var tooltips = ['INTRO', 'COLOR THEMES', 'PHOTO DIARY', 'STORYBOOK', 'REVIEWS & FREE DOWNLOAD', 'MADE BY PROJECT9'];
 
   var $pageFooter = $('.js-page-footer');
-  var $slides = $(".js-slides");
+  var $slides = $('.js-slides');
   var $colorCards = $('.js-colors');
   var $iPhone = $('.js-iphone');
   var $iPhoneOverlay = $('.js-iphone-overlay');
-  var $reviewsSwipe = $(".js-reviews-swipe");
-  var $reviewsNextButton = $(".js-reviews-next");
-  var $reviewsPrevButton = $(".js-reviews-prev");
-  var $fullpageNavigation = $("#fp-nav");
+  var $reviewsSwipe = $('.js-reviews-swipe');
+  var $reviewsNextButton = $('.js-reviews-next');
+  var $reviewsPrevButton = $('.js-reviews-prev');
+  var $fullpageNavigation = $('#fp-nav');
 
   $slides.fullpage({
     verticalCentered  : false,
@@ -40,17 +40,18 @@ function setupDynamicSite() {
     navigationTooltips: tooltips,
 
     afterRender: function() {
-      $fullpageNavigation = $("#fp-nav");
+      $fullpageNavigation = $('#fp-nav');
     },
 
     onLeave: function(index, nextIndex) {
       $slides.removeClass(numbers[index]);
       $slides.addClass(numbers[nextIndex]);
       $iPhone.attr('class', 'iphone__viewbox js-iphone ' + numbers[nextIndex]); // jQuery addClass and removeClass don't work with SVG
-      $pageFooter.toggleClass('visible', nextIndex === tooltips.length);
+      // $iPhone.attr('class', 'colors js-colors ' + (nextIndex === 6 ? '' : ''));
+      $pageFooter.toggleClass('visible', nextIndex === tooltips.length -1 || nextIndex === tooltips.length );
       $fullpageNavigation.toggleClass('hidden', nextIndex === tooltips.length);
       $colorCards.attr('class', 'colors js-colors ' + (nextIndex === 2 ? 'visible' : ''));
-      $iPhoneOverlay.toggleClass('send-to-back', nextIndex === tooltips.length);
+      $iPhoneOverlay.toggleClass('bring-to-front', nextIndex > 0 && nextIndex <= tooltips.length);
     },
   });
 

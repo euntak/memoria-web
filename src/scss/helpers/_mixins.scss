@@ -22,10 +22,10 @@
 
 @mixin vbottom {
   position: relative;
-  top: 100%;
-  transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
+  top: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
 }
 
 @mixin vtop {
